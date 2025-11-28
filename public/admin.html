@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Painel Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Painel Administrador</h1>
+    <button id="logoutBtn" style="float: right; margin: 20px; background:#c0392b; border:none; color:#fff; padding:8px 15px; border-radius:5px; cursor:pointer;">Sair</button>
+  </header>
+
+  <section class="admin-container">
+    <h2>Adicionar Produto</h2>
+
+    <input id="nome" type="text" placeholder="Nome do produto" />
+    <input id="preco" type="number" placeholder="Preço" step="0.01" />
+    <input id="categoria" type="text" placeholder="Categoria" />
+    <input id="imagem" type="text" placeholder="URL da imagem" />
+    <textarea id="descricao" placeholder="Descrição completa"></textarea>
+
+    <button onclick="salvarProduto()">Salvar Produto</button>
+
+    <p id="msg"></p>
+  </section>
+
+  <script src="admin.js"></script>
+</body>
+</html>

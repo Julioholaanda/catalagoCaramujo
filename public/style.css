@@ -5,30 +5,8 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Fundo com imagem */
 body {
-  background: url("https://media-bsb1-1.cdn.whatsapp.net/v/t61.24694-24/290829397_176912978088292_5413132250683857559_n.jpg?ccb=11-4&oh=01_Q5Aa2wGG2BY7hcMYpYjA4PrBQC6uT3EUayqyUmwrc7rfN2ezlA&oe=690E5E23&_nc_sid=5e03e0&_nc_cat=109") no-repeat center center fixed;
-  background-size: cover;
-  color: #333;
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.7); /* camada clara */
-  z-index: -1;
-}
-
-
-body {
-  background-color: #f9f9f9;
+  background: #f9f9f9;
   color: #333;
 }
 
@@ -38,19 +16,13 @@ header {
   color: white;
   text-align: center;
   padding: 25px 15px;
+  position: relative;
 }
 
 header h1 {
   font-size: 26px;
 }
 
-header p {
-  margin-top: 8px;
-  font-size: 16px;
-  opacity: 0.9;
-}
-
-/* Campo de busca */
 .busca-container {
   text-align: center;
   padding: 20px;
@@ -123,7 +95,7 @@ header p {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
-  cursor: pointer;
+  cursor: default;
 }
 
 .card:hover {
@@ -153,11 +125,98 @@ header p {
   font-weight: bold;
 }
 
-footer {
-  background-color: #03853d; 
+.button-info {
+  background: #03853d;
+  padding: 8px 12px;
+  border: none;
   color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.info-extra {
+  display: none;
+  margin-top: 10px;
+  color: #444;
+}
+
+/* Admin */
+.admin-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px #0002;
+}
+
+.admin-container input,
+.admin-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.admin-container button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  background: #03853d;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.admin-container button:hover {
+  opacity: 0.9;
+}
+
+/* Login */
+.center {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 2px 10px #0003;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.login-box button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: #03853d;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.login-box button:hover {
+  opacity: 0.9;
+}
+
+.erro {
+  color: red;
+  margin-top: 10px;
+  font-weight: 600;
 }
