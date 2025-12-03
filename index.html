@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo Caramujo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🛍️ Catálogo Caramujo</h1>
+    <p>Encontre o que você procura de forma simples e rápida!</p>
+
+    <!-- Ícone discreto do admin (opção B) -->
+    <a class="admin-icon" href="admin.html" title="Área do Administrador" aria-label="Admin">
+      ⚙️
+    </a>
+  </header>
+
+  <!-- Campo de busca principal -->
+  <section class="busca-container">
+    <input type="text" id="campo-busca" placeholder="Digite o nome do produto..." />
+  </section>
+
+  <!-- Categorias -->
+  <nav class="menu-categorias" id="menu-categorias">
+    <button class="categoria ativa" data-categoria="todos">Todos</button>
+    <button class="categoria" data-categoria="guloseimas">Guloseimas</button>
+    <button class="categoria" data-categoria="limpeza">Produtos de Limpeza</button>
+    <button class="categoria" data-categoria="saborizantes">Saborizantes</button>
+    <button class="categoria" data-categoria="descartaveis">Descartáveis</button>
+  </nav>
+
+  <!-- Catálogo -->
+  <main>
+    <div id="catalogo" class="catalogo"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 - Catálogo Caramujo | Desenvolvido para facilitar suas compras!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

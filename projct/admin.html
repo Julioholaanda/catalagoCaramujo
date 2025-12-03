@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Catálogo Caramujo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>⚙️ Painel do Administrador</h1>
+    <p class="subheader">Gerencie produtos (LocalStorage) — Login simples</p>
+    <a class="voltar-site" href="index.html">⬅ Voltar ao site</a>
+  </header>
+
+  <main class="admin-main">
+    <!-- Login -->
+    <div id="login-box" class="box">
+      <h2>Entrar (Admin)</h2>
+      <input id="admin-email" type="email" placeholder="Email" />
+      <input id="admin-senha" type="password" placeholder="Senha" />
+      <div class="row">
+        <button id="btn-login">Entrar</button>
+        <button id="btn-init-user" class="ghost">Criar usuário padrão</button>
+      </div>
+      <p class="nota">Usuário padrão: <strong>admin@admin.com</strong> / senha: <strong>1234</strong></p>
+    </div>
+
+    <!-- Painel (aparece depois de logar) -->
+    <div id="painel-admin" class="box hidden">
+      <div class="painel-top">
+        <h2>Adicionar / Editar Produto</h2>
+        <div>
+          <button id="btn-logout" class="ghost">Sair</button>
+        </div>
+      </div>
+
+      <form id="form-produto">
+        <label>
+          Nome (obrigatório)
+          <input id="p-nome" required type="text" />
+        </label>
+
+        <label>
+          Preço (opcional)
+          <input id="p-preco" type="number" step="0.01" min="0" placeholder="Ex: 19.90" />
+        </label>
+
+        <label>
+          Categoria
+          <input id="p-categoria" type="text" placeholder="Ex: potes, camisetas, limpeza..." />
+        </label>
+
+        <label>Imagem (opcional)</label>
+
+            <div class="imagem-opcoes">
+            <div>
+            <p><strong>Opção 1:</strong> Enviar arquivo</p>
+            <input type="file" id="img-arquivo" accept="image/*">
+    </div>
+
+    <div>
+        <p><strong>Opção 2:</strong> URL da imagem</p>
+        <input type="text" id="img-url" placeholder="https://exemplo.com/imagem.jpg">
+    </div>
+</div>
+
+
+        <label>
+          Informações / Descrição
+          <textarea id="p-info" rows="4" placeholder="Detalhes, medidas, observações..."></textarea>
+        </label>
+
+        <div class="row">
+          <button type="submit" id="btn-salvar">Salvar produto</button>
+          <button type="button" id="btn-cancel-edit" class="ghost hidden">Cancelar edição</button>
+        </div>
+      </form>
+
+      <hr />
+
+      <h3>Produtos cadastrados</h3>
+      <div id="lista-produtos-admin" class="lista-produtos-admin"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 - Catálogo Caramujo • Painel Admin</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
